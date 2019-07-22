@@ -1,0 +1,24 @@
+<nav class="navbar is-dark">
+
+    <!-- logo -->
+    <div class="navbar-brand">
+      <a class="navbar-item">
+        <img src="assets/img/Angular.png">
+      </a>
+
+      <a (click)="toggleNavbar()" role="button" #navBurger class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>      
+    </div>
+
+    <!-- menu -->
+    <div class="navbar-menu" #navMenu (click)="toggleNavbar()">
+      <div class="navbar-start">
+        <a class="navbar-item" [routerLink]="['']" routerLinkActive="router-link-active" >Home</a>
+        <a class="navbar-item" [routerLink]="['/contact']" routerLinkActive="router-link-active" >Contact</a>
+        <a class="navbar-item" [routerLink]="['/users']" routerLinkActive="router-link-active" >Users</a>
+      </div>
+    </div>
+  </nav>
